@@ -12,7 +12,7 @@ const App = () => {
 
   // Fetch entries from the backend
   useEffect(() => {
-    axios.get('http://localhost:5000/entries')
+    axios.get('https://expense-trackerr-q1ji.onrender.com/entries')
       .then((response) => {
         setEntries(response.data);
         calculateNetBalance(response.data);
@@ -32,7 +32,7 @@ const App = () => {
   const addEntry = (e) => {
     e.preventDefault();
     const newEntry = { amount: parseFloat(amount), description, date, type };
-    axios.post('http://localhost:5000/addEntry', newEntry)
+    axios.post('https://expense-trackerr-q1ji.onrender.com/addEntry', newEntry)
       .then((response) => {
         const updatedEntries = [...entries, response.data];
         setEntries(updatedEntries);
@@ -46,7 +46,7 @@ const App = () => {
   };
 
   const deleteEntry = (id) => {
-    axios.delete(`http://localhost:5000/deleteEntry/${id}`)
+    axios.delete(`https://expense-trackerr-q1ji.onrender.com/deleteEntry/${id}`)
       .then(() => {
         const updatedEntries = entries.filter(entry => entry._id !== id);
         setEntries(updatedEntries);
