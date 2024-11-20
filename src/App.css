@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: rgba(39, 44, 44, 1); /* Dark Grayish Background */
+  color: #d4edda; /* Light Greenish Text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(50, 55, 55, 1); /* Slightly lighter than background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Title and Balance */
+h1 {
+  color: #f0fdfa; /* Soft White */
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #8ce68c; /* Lime Green for balance */
+  margin-bottom: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input, form select, form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+form input, form select {
+  background-color: rgba(70, 75, 75, 1); /* Input field color */
+  color: #d4edda; /* Light Greenish Text */
+}
+
+form button {
+  background-color: #345455; /* Button Color */
+  color: #f0fdfa; /* Soft White */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #2d494a; /* Darker Button on Hover */
+}
+
+/* Entries List */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: rgba(50, 55, 55, 1); /* Same as container color */
+  color: #d4edda;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  background-color: #345455; /* Button Color */
+  color: #f0fdfa; /* Soft White */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #2d494a; /* Darker Button on Hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    width: 90%;
+  }
+}
